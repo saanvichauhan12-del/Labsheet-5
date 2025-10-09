@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int factorial(int n) {
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+        fact *= i;
+    return fact;
+}
+
+int main() {
+    cout << "Strong numbers between 1 and 500 are:\n";
+
+    for (int i = 1; i <= 500; i++) {
+        int num = i, rem, sum = 0;
+
+        while (num > 0) {
+            rem = num % 10;
+            sum += factorial(rem);
+            num /= 10;
+        }
+
+        if (sum == i)
+            cout << i << " ";
+    }
+
+    return 0;
+}
