@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, rem, largest = 0, smallest = 9;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    while (n > 0) {
+        rem = n % 10;
+        if (rem > largest) largest = rem;
+        if (rem < smallest) smallest = rem;
+        n /= 10;
+    }
+
+    cout << "Largest digit = " << largest << endl;
+    cout << "Smallest digit = " << smallest;
+    return 0;
+}
