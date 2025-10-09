@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, count = 0;
+
+    cout << "Enter numbers (0 to stop):\n";
+    while (true) {
+        cin >> n;
+        if (n == 0)
+            break;  // stop when 0 is entered
+        if (n > 0)
+            count++;
+    }
+
+    cout << "Total positive numbers entered: " << count;
+    return 0;
+}
